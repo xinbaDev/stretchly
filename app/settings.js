@@ -53,19 +53,19 @@ microbreakDurationMinus.addEventListener('click', function (e) {
   }
 })
 
-breakIntervalPlus.addEventListener('click', function (e) {
+/*breakIntervalPlus.addEventListener('click', function (e) {
   if (breakInterval.innerHTML !== '30') {
     ipcRenderer.send('save-setting', 'breakInterval', parseInt(breakInterval.innerHTML, 10) + 1)
   }
-})
+})*/
 
-breakIntervalMinus.addEventListener('click', function (e) {
+/*breakIntervalMinus.addEventListener('click', function (e) {
   if (breakInterval.innerHTML !== '1') {
     ipcRenderer.send('save-setting', 'breakInterval', parseInt(breakInterval.innerHTML, 10) - 1)
   }
-})
+})*/
 
-breakDurationPlus.addEventListener('click', function (e) {
+/*breakDurationPlus.addEventListener('click', function (e) {
   if (Number(breakDuration.innerHTML) < 5) {
     ipcRenderer.send('save-setting', 'breakDuration', (parseInt(breakDuration.innerHTML, 10) + 1) * 1000 * 60)
   } else {
@@ -82,7 +82,7 @@ breakDurationMinus.addEventListener('click', function (e) {
     }
   }
 })
-
+*/
 ipcRenderer.on('renderSettings', (event, data) => {
   let enableElements = document.getElementsByClassName('enable')
   for (let i = 0; i < enableElements.length; i++) {
@@ -111,9 +111,9 @@ ipcRenderer.on('renderSettings', (event, data) => {
 
   microbreakInterval.innerHTML = data['microbreakInterval'] / 1000 / 60
   microbreakDuration.innerHTML = data['microbreakDuration'] / 1000
-  breakInterval.innerHTML = data['breakInterval']
-  breakDuration.innerHTML = data['breakDuration'] / 1000 / 60
-  realBreakInterval.innerHTML = data['microbreakInterval'] / 1000 / 60 * (data['breakInterval'] + 1)
+/*  breakInterval.innerHTML = data['breakInterval']
+  breakDuration.innerHTML = data['breakDuration'] / 1000 / 60*/
+  //realBreakInterval.innerHTML = data['microbreakInterval'] / 1000 / 60 * (data['breakInterval'] + 1)
 
   document.body.style.background = data['mainColor']
 

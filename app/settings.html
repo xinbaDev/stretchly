@@ -6,22 +6,31 @@
   </head>
   <body>
     <div class="settings">
+      <h2 data-i18next="settings.setting_title"></h2>
+
       <h2 data-i18next="settings.microbreaks"></h2>
       <p>
-        <span id="microbreakDurationMinus" class="pointer">-</span>
-        <span id="microbreakDuration"></span>
-        <span id="microbreakDurationPlus" class="pointer">+</span>
-        <span data-i18next="settings.secondsEveryBreak"></span>
+        
+        <span data-i18next="settings.meige"></span>
         <span id="microbreakIntervalMinus" class="pointer">-</span>
         <span id="microbreakInterval"></span>
         <span id="microbreakIntervalPlus" class="pointer">+</span>
+
         <span data-i18next="settings.minutes"></span>
+
+        <span id="microbreakDurationMinus" class="pointer">-</span>
+        <span id="microbreakDuration"></span>
+        <span id="microbreakDurationPlus" class="pointer">+</span>
+
+        <span data-i18next="settings.secondsEveryBreak"></span>
+
         <span class="strict">
           <br/><span data-i18next="settings.dontLetMeSkipMicrobreaks"></span>
           <input type="checkbox" value="microbreakStrictMode" class="enable">
         </span>
       </p>
-      <h2 data-i18next="settings.breaks"></h2>
+
+<!--       <h2 data-i18next="settings.breaks"></h2>
       <p>
         <span id="breakDurationMinus" class="pointer">-</span>
         <span id="breakDuration"></span>
@@ -36,16 +45,17 @@
           <br/><span data-i18next="settings.dontLetMeSkipBreaks"></span>
           <input type="checkbox" value="breakStrictMode" class="enable">
         </span>
-      </p>
+      </p> -->
+
       <div>
-        <div class="enabled">
+<!--         <div class="enabled">
           <input type="checkbox" value="microbreak" class="enable enabletype">
           <span data-i18next="settings.microbreaksEnabled">
-        </div>
-        <div class="enabled">
+        </div> -->
+<!--         <div class="enabled">
           <input type="checkbox" value="break" class="enable enabletype">
           <span data-i18next="settings.breaksEnabled">
-        </div>
+        </div> -->
         <div class="next">
           <a href="settings2.html" title="more settings">&rsaquo;</a>
         </div>

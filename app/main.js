@@ -164,16 +164,16 @@ function startProcessWin () {
   })
 }
 
-function planVersionCheck (seconds = 1) {
+/*function planVersionCheck (seconds = 1) {
   setTimeout(checkVersion, seconds * 1000)
-}
+}*/
 
-function checkVersion () {
+/*function checkVersion () {
   processWin.webContents.send('checkVersion', `v${app.getVersion()}`, settings.get('notifyNewVersion'))
   planVersionCheck(3600 * 5)
 }
-
-function startMicrobreakNotification () {
+*/
+/*function startMicrobreakNotification () {
   processWin.webContents.send('showNotification', i18next.t('main.microbreakIn', {seconds: settings.get('microbreakNotificationInterval') / 1000}))
   breakPlanner.nextBreakAfterNotification('startMicrobreak')
 }
@@ -181,7 +181,7 @@ function startMicrobreakNotification () {
 function startBreakNotification () {
   processWin.webContents.send('showNotification', i18next.t('main.breakIn', {seconds: settings.get('breakNotificationInterval') / 1000}))
   breakPlanner.nextBreakAfterNotification('startBreak')
-}
+}*/
 
 function startMicrobreak () {
   if (!microbreakIdeas) {
@@ -343,7 +343,7 @@ function loadSettings () {
   settings = new AppSettings(settingsFile)
   breakPlanner = new BreaksPlanner(settings)
   breakPlanner.nextBreak() // plan first break
-  breakPlanner.on('startMicrobreakNotification', () => { startMicrobreakNotification() })
+  //breakPlanner.on('startMicrobreakNotification', () => { startMicrobreakNotification() })
   //breakPlanner.on('startBreakNotification', () => { startBreakNotification() })
   breakPlanner.on('startMicrobreak', () => { startMicrobreak() })
   breakPlanner.on('finishMicrobreak', (shouldPlaySound) => { finishMicrobreak(shouldPlaySound) })
@@ -628,17 +628,18 @@ function updateToolTip () {
         }
         if (breakType) {
           let notificationTime
-          if (breakNotification) {
+/*          if (breakNotification) {
             notificationTime = settings.get('breakNotificationInterval')
           } else {
             notificationTime = 0
-          }
+          }*/
+          notificationTime = 0
           statusMessage += i18next.t('main.timeToNext', {'timeLeft': Utils.formatTillBreak(breakPlanner.scheduler.timeLeft + notificationTime), 'breakType': i18next.t(`main.${breakType}`)})
-          if (breakType === 'microbreak') {
+         /* if (breakType === 'microbreak') {
             let breakInterval = settings.get('breakInterval') + 1
             let breakNumber = breakPlanner.breakNumber % breakInterval
             statusMessage += i18next.t('main.nextBreakFollowing', {'count': breakInterval - breakNumber})
-          }
+          }*/
         }
       }
     }
