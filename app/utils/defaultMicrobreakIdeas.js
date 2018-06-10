@@ -11,5 +11,7 @@ module.exports = [
   { data: 'Slowly tilt head to side and hold for 5-10 seconds.', enabled: true },
   { data: 'Stand from chair and stretch.', enabled: true },
   { data: 'Refocus eyes on an object at least 20 meters away.', enabled: true },
-  { data: 'Take a moment to think about something you appreciate.', enabled: true }
+  { data: 'Take a moment to think about something you appreciate.', enabled: true },
+  {data: ['喝水', '快去喝水！～'], enabled: true},
+  {data: ['站一站', '快起来站一站！～'], enabled: true}
 ]

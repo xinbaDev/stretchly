@@ -41,11 +41,12 @@ if (shouldQuit) {
   return
 }
 
-app.on('ready', startProcessWin)
+//app.on('ready', startProcessWin)
 app.on('ready', loadSettings)
+app.on('ready', showSettingsWindow)
 app.on('ready', createTrayIcon)
 app.on('ready', startPowerMonitoring)
-app.on('ready', showSettingsWindow)
+
 
 
 app.on('window-all-closed', () => {
