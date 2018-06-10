@@ -153,7 +153,7 @@ function startProcessWin () {
   const modalPath = `file://${__dirname}/process.html`
   processWin = new BrowserWindow({
     icon: `${__dirname}/images/stretchly_18x18.png`,
-    show: false
+    show: true
   })
   processWin.loadURL(modalPath)
   processWin.once('ready-to-show', () => {
@@ -341,11 +341,11 @@ function loadSettings () {
   breakPlanner = new BreaksPlanner(settings)
   breakPlanner.nextBreak() // plan first break
   breakPlanner.on('startMicrobreakNotification', () => { startMicrobreakNotification() })
-  breakPlanner.on('startBreakNotification', () => { startBreakNotification() })
+  //breakPlanner.on('startBreakNotification', () => { startBreakNotification() })
   breakPlanner.on('startMicrobreak', () => { startMicrobreak() })
   breakPlanner.on('finishMicrobreak', (shouldPlaySound) => { finishMicrobreak(shouldPlaySound) })
-  breakPlanner.on('startBreak', () => { startBreak() })
-  breakPlanner.on('finishBreak', (shouldPlaySound) => { finishBreak(shouldPlaySound) })
+/*  breakPlanner.on('startBreak', () => { startBreak() })
+  breakPlanner.on('finishBreak', (shouldPlaySound) => { finishBreak(shouldPlaySound) })*/
   breakPlanner.on('resumeBreaks', () => { resumeBreaks() })
   i18next.changeLanguage(settings.get('language'))
 }
@@ -438,7 +438,7 @@ function getTrayMenu () {
     trayMenu.push({
       label: i18next.t('main.downloadLatestVersion'),
       click: function () {
-        shell.openExternal('https://github.com/hovancik/stretchly/releases')
+        shell.openExternal('https://github.com/xinbaDev/stretchly/releases')
       }
     })
   }
@@ -447,11 +447,6 @@ function getTrayMenu () {
     label: i18next.t('main.about'),
     click: function () {
       showAboutWindow()
-    }
-  }, {
-    label: i18next.t('main.becomePatron'),
-    click: function () {
-      shell.openExternal('https://www.patreon.com/hovancik')
     }
   }, {
     type: 'separator'
@@ -574,13 +569,7 @@ function getTrayMenu () {
 
   trayMenu.push({
     type: 'separator'
-  }, {
-    label: i18next.t('main.yourStretchly'),
-    click: function () {
-      let color = settings.get('mainColor').replace('#', '')
-      shell.openExternal(`https://my.stretchly.net/?bg=${color}`)
-    }
-  }, {
+  },{
     type: 'separator'
   }, {
     label: i18next.t('main.quitStretchly'),
