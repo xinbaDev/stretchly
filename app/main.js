@@ -45,6 +45,8 @@ app.on('ready', startProcessWin)
 app.on('ready', loadSettings)
 app.on('ready', createTrayIcon)
 app.on('ready', startPowerMonitoring)
+app.on('ready', showSettingsWindow)
+
 
 app.on('window-all-closed', () => {
   // do nothing, so app wont get closed
@@ -153,7 +155,7 @@ function startProcessWin () {
   const modalPath = `file://${__dirname}/process.html`
   processWin = new BrowserWindow({
     icon: `${__dirname}/images/stretchly_18x18.png`,
-    show: true
+    show: false
   })
   processWin.loadURL(modalPath)
   processWin.once('ready-to-show', () => {
