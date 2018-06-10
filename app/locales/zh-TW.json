@@ -19,9 +19,9 @@
     "for5Hours": "5 小時",
     "indefinitely": "無限期",
     "resetBreaks": "重置休息",
-    "settings": "設定",
+    "settings": "61Financial stretchly 設定",
     "startAtLogin": "開機時自動執行",
-    "yourStretchly": "我的 61Financial",
+    "yourStretchly": "你的stretchly",
     "quitStretchly": "離開",
     "resetToDefaults": "恢復預設值",
     "areYouSure": "您確定要把本軟體恢復預設值嗎？",
@@ -51,9 +51,10 @@
     "latestVersion": "最新版本:"
   },
   "settings": {
-    "settings": "設定",
+    "settings": "61Financial stretchly 設定",
+    "setting_title": "61Financial stretchly 設定",
     "microbreaks": "小休息",
-    "secondsEveryBreak": "秒休息每隔",
+    "secondsEveryBreak": "秒休息",
     "minutes": "分鐘",
     "dontLetMeSkipMicrobreaks": "禁止跳過小休息",
     "breaks": "休息",
@@ -65,7 +66,8 @@
     "microbreaksEnabled": "開啟小休息",
     "breaksEnabled": "開啟休息",
     "resetToDefaults": "恢復預設值",
-    "cantDisableBoth": "不可同時禁用兩種模式"
+    "cantDisableBoth": "不可同時禁用兩種模式",
+    "meige": "每隔"
   },
   "settings2": {
     "settings": "設定",

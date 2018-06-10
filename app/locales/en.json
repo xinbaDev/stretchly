@@ -18,7 +18,7 @@
     "for5Hours": "for 5 hours",
     "indefinitely": "indefinitely",
     "resetBreaks": "Reset breaks",
-    "settings": "Settings",
+    "settings": "61Financial stretchly Settings",
     "startAtLogin": "Start at login",
     "yourStretchly": "Your stretchly",
     "quitStretchly": "Quit stretchly",
@@ -51,7 +51,8 @@
     "checking": "checking..."
   },
   "settings": {
-    "settings": "Settings",
+    "settings": "61Financial stretchly Settings",
+    "setting_title": "61Financial stretchly Settings",
     "microbreaks": "microbreaks",
     "secondsEveryBreak": "seconds break every",
     "minutes": "minutes",
@@ -65,7 +66,8 @@
     "microbreaksEnabled": "microbreaks enabled",
     "breaksEnabled": "breaks enabled",
     "resetToDefaults": "reset to defaults",
-    "cantDisableBoth": "Can't disable both break types."
+    "cantDisableBoth": "Can't disable both break types.",
+    "meige": "every"
   },
   "settings2": {
     "settings": "Settings",
