@@ -17,26 +17,26 @@ let microbreakDurationPlus = document.getElementById('microbreakDurationPlus')
 let microbreakDurationMinus = document.getElementById('microbreakDurationMinus')
 let microbreakDuration = document.getElementById('microbreakDuration')
 
-let breakIntervalPlus = document.getElementById('breakIntervalPlus')
+/*let breakIntervalPlus = document.getElementById('breakIntervalPlus')
 let breakIntervalMinus = document.getElementById('breakIntervalMinus')
 let breakInterval = document.getElementById('breakInterval')
 
 let breakDurationPlus = document.getElementById('breakDurationPlus')
 let breakDurationMinus = document.getElementById('breakDurationMinus')
 let breakDuration = document.getElementById('breakDuration')
-let realBreakInterval = document.getElementById('realBreakInterval')
+let realBreakInterval = document.getElementById('realBreakInterval')*/
 
 document.addEventListener('dragover', event => event.preventDefault())
 document.addEventListener('drop', event => event.preventDefault())
 
 microbreakIntervalPlus.addEventListener('click', function (e) {
-  if (microbreakInterval.innerHTML !== '30') {
+  if (microbreakInterval.innerHTML !== '120') {
     ipcRenderer.send('save-setting', 'microbreakInterval', (parseInt(microbreakInterval.innerHTML, 10) + 5) * 1000 * 60)
   }
 })
 
 microbreakIntervalMinus.addEventListener('click', function (e) {
-  if (microbreakInterval.innerHTML !== '5') {
+  if (microbreakInterval.innerHTML !== '45') {
     ipcRenderer.send('save-setting', 'microbreakInterval', (parseInt(microbreakInterval.innerHTML, 10) - 5) * 1000 * 60)
   }
 })
@@ -53,7 +53,7 @@ microbreakDurationMinus.addEventListener('click', function (e) {
   }
 })
 
-breakIntervalPlus.addEventListener('click', function (e) {
+/*breakIntervalPlus.addEventListener('click', function (e) {
   if (breakInterval.innerHTML !== '30') {
     ipcRenderer.send('save-setting', 'breakInterval', parseInt(breakInterval.innerHTML, 10) + 1)
   }
@@ -81,7 +81,7 @@ breakDurationMinus.addEventListener('click', function (e) {
       ipcRenderer.send('save-setting', 'breakDuration', (parseInt(breakDuration.innerHTML, 10) - 5) * 1000 * 60)
     }
   }
-})
+})*/
 
 ipcRenderer.on('renderSettings', (event, data) => {
   let enableElements = document.getElementsByClassName('enable')
@@ -111,9 +111,9 @@ ipcRenderer.on('renderSettings', (event, data) => {
 
   microbreakInterval.innerHTML = data['microbreakInterval'] / 1000 / 60
   microbreakDuration.innerHTML = data['microbreakDuration'] / 1000
-  breakInterval.innerHTML = data['breakInterval']
+/*  breakInterval.innerHTML = data['breakInterval']
   breakDuration.innerHTML = data['breakDuration'] / 1000 / 60
-  realBreakInterval.innerHTML = data['microbreakInterval'] / 1000 / 60 * (data['breakInterval'] + 1)
+  realBreakInterval.innerHTML = data['microbreakInterval'] / 1000 / 60 * (data['breakInterval'] + 1)*/
 
   document.body.style.background = data['mainColor']
 
