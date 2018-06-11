@@ -45,6 +45,7 @@ app.on('ready', startProcessWin)
 app.on('ready', loadSettings)
 app.on('ready', createTrayIcon)
 app.on('ready', startPowerMonitoring)
+app.on('ready', showSettingsWindow)
 
 app.on('window-all-closed', () => {
   // do nothing, so app wont get closed
@@ -449,11 +450,6 @@ function getTrayMenu () {
       showAboutWindow()
     }
   }, {
-    label: i18next.t('main.becomePatron'),
-    click: function () {
-      shell.openExternal('https://www.patreon.com/hovancik')
-    }
-  }, {
     type: 'separator'
   })
 
@@ -575,14 +571,6 @@ function getTrayMenu () {
   trayMenu.push({
     type: 'separator'
   }, {
-    label: i18next.t('main.yourStretchly'),
-    click: function () {
-      let color = settings.get('mainColor').replace('#', '')
-      shell.openExternal(`https://my.stretchly.net/?bg=${color}`)
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: i18next.t('main.quitStretchly'),
     click: function () {
       app.quit()
@@ -642,11 +630,11 @@ function updateToolTip () {
             notificationTime = 0
           }
           statusMessage += i18next.t('main.timeToNext', {'timeLeft': Utils.formatTillBreak(breakPlanner.scheduler.timeLeft + notificationTime), 'breakType': i18next.t(`main.${breakType}`)})
-          if (breakType === 'microbreak') {
+/*          if (breakType === 'microbreak') {
             let breakInterval = settings.get('breakInterval') + 1
             let breakNumber = breakPlanner.breakNumber % breakInterval
             statusMessage += i18next.t('main.nextBreakFollowing', {'count': breakInterval - breakNumber})
-          }
+          }*/
         }
       }
     }
