@@ -1,6 +1,6 @@
 module.exports = {
-  microbreakDuration: 20000,
-  microbreakInterval: 600000,
+  microbreakDuration: 200000,
+  microbreakInterval: 3600000,
   breakDuration: 300000,
   breakInterval: 2,
   breakNotification: true,
@@ -8,7 +8,7 @@ module.exports = {
   breakNotificationInterval: 30000,
   microbreakNotificationInterval: 10000,
   microbreak: true,
-  break: true,
+  break: false,
   microbreakStrictMode: false,
   breakStrictMode: false,
   mainColor: '#478484',
