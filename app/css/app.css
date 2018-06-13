@@ -155,3 +155,8 @@ progress {
 select  {
   padding: 5px 3px 5px 10px;
 }
+
+span {
+  color: #000;
+  font: caption;
+}
