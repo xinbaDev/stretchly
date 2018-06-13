@@ -143,7 +143,7 @@ function createTrayIcon () {
     appIcon = new Tray(iconFolder + '/trayTemplate.png')
     app.dock.hide()
   } else {
-    appIcon = new Tray(iconFolder + '/stretchly_18x18.png')
+    appIcon = new Tray(iconFolder + '/61.png')
   }
   appIcon.setContextMenu(getTrayMenu())
   updateToolTip()
@@ -153,7 +153,7 @@ function createTrayIcon () {
 function startProcessWin () {
   const modalPath = `file://${__dirname}/process.html`
   processWin = new BrowserWindow({
-    icon: `${__dirname}/images/stretchly_18x18.png`,
+    icon: `${__dirname}/images/61.png`,
     show: false
   })
   processWin.loadURL(modalPath)
@@ -209,7 +209,7 @@ function startMicrobreak () {
 
   for (let displayIdx = 0; displayIdx < numberOfDisplays(); displayIdx++) {
     let microbreakWinLocal = new BrowserWindow({
-      icon: `${__dirname}/images/stretchly_18x18.png`,
+      icon: `${__dirname}/images/61.png`,
       x: displaysX(displayIdx),
       y: displaysY(displayIdx),
       frame: false,
@@ -269,7 +269,7 @@ function startBreak () {
 
   for (let displayIdx = 0; displayIdx < numberOfDisplays(); displayIdx++) {
     let breakWinLocal = new BrowserWindow({
-      icon: `${__dirname}/images/stretchly_18x18.png`,
+      icon: `${__dirname}/images/61.png`,
       x: displaysX(displayIdx),
       y: displaysY(displayIdx),
       frame: false,
@@ -393,7 +393,7 @@ function showAboutWindow () {
   }
   const modalPath = `file://${__dirname}/about.html`
   aboutWin = new BrowserWindow({
-    icon: `${__dirname}/images/stretchly_18x18.png`,
+    icon: `${__dirname}/images/61.png`,
     x: displaysX(),
     y: displaysY(),
     resizable: false,
@@ -413,7 +413,7 @@ function showSettingsWindow () {
   }
   const modalPath = `file://${__dirname}/settings.html`
   settingsWin = new BrowserWindow({
-    icon: `${__dirname}/images/stretchly_18x18.png`,
+    icon: `${__dirname}/images/61.png`,
     x: displaysX(),
     y: displaysY(),
     resizable: false,
