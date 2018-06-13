@@ -1,6 +1,6 @@
 module.exports = {
   microbreakDuration: 200000,
-  microbreakInterval: 3600000,
+  microbreakInterval: 30000,
   breakDuration: 300000,
   breakInterval: 2,
   breakNotification: true,
@@ -15,7 +15,7 @@ module.exports = {
   audio: 'crystal-glass',
   fullscreen: false,
   ideas: true,
-  naturalBreaks: true,
+  naturalBreaks: false,
   allScreens: true,
   useIdeasFromSettings: false,
   language: 'en',

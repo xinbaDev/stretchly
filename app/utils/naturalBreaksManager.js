@@ -26,7 +26,7 @@ class NaturalBreaksManager extends EventEmitter {
 
   get idleTime () {
     if (this.usingNaturalBreaks) {
-      return require('@paulcbetts/system-idle-time').getIdleTime()
+      //return require('@paulcbetts/system-idle-time').getIdleTime()
     } else {
       return 0
     }

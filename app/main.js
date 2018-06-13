@@ -185,10 +185,10 @@ function startMicrobreak () {
   if (!microbreakIdeas) {
     loadIdeas()
   }
-  if (breakPlanner.naturalBreaksManager.idleTime > settings.get('breakDuration')) {
+/*  if (breakPlanner.naturalBreaksManager.idleTime > settings.get('breakDuration')) {
     console.log('in natural break')
     return
-  }
+  }*/
   // don't start another break if break running
   if (microbreakWins) {
     console.log('microbreak already running')
@@ -245,10 +245,10 @@ function startBreak () {
   if (!breakIdeas) {
     loadIdeas()
   }
-  if (breakPlanner.naturalBreaksManager.idleTime > settings.get('breakDuration')) {
+/*  if (breakPlanner.naturalBreaksManager.idleTime > settings.get('breakDuration')) {
     console.log('in natural break')
     return
-  }
+  }*/
   // don't start another break if break running
   if (breakWins) {
     console.log('break already running')
